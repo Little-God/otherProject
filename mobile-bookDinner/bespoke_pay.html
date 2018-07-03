@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title>菜单明细</title>
+		<script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+	    <link rel="stylesheet" type="text/css" href="css/mui.poppicker.css"/>
+	</head>
+	<body>
+		<header>
+			<div class="back"><span class="icon-font">&#xe61f;</span></div>
+			<div class="title">已点菜单</div>
+			<div class="add"><span class="icon-font">&#xe626;</span></div>
+		</header>
+		<style type="text/css">
+			body{
+				background: #efefef;
+			}
+			.ordright{
+				overflow: initial;
+			}
+			.listul li{
+				height: .5rem;
+			}
+			.ordright .icon-font{
+				color: #A11629;
+			}
+			.whice .ordright{
+				display: none;
+			}
+			.whice.active .ordright{
+				display: block;
+			}
+		</style>
+		<div class="container">
+			<ul class="listul">
+				<li>
+					<p>餐费</p>
+					<p class="ordright" style="font-size: .14rem;">￥165.00</p>
+				</li>
+				<li class="whice active">
+					<div class="lll">
+						<div class="iconwei"><span class="icon-font">&#xe654;</span></div>
+						<div>微信支付</div>
+					</div>
+					<p class="ordright"><span class="icon-font">&#xe6ce;</span></p>
+				</li>
+				<li class="whice">
+					<div class="lll">
+						<div class="iconzhi"><span class="icon-font">&#xe600;</span></div>
+						<div>支付宝支付</div>
+					</div>
+					<p class="ordright"><span class="icon-font">&#xe6ce;</span></p>
+				</li>
+			</ul>
+			<div class="btn">
+				<button>去支付</button>
+			</div>
+		</div>
+		<footer>
+			<div class="active">
+				<p><span class="icon-font">&#xe613;</span></p>
+				<div class="ft">首页</div>
+			</div>
+			<div>
+				<p><span class="icon-font">&#xe606;</span></p>
+				<p class="ft">购物车</p>
+			</div>
+			<div>
+				<p><span class="icon-font">&#xe602;</span></p>
+				<p class="ft">我的</p>
+			</div>
+		</footer>
+	</body>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+		$('.whice').click(function(){
+			$('.whice').removeClass('active');
+			$(this).addClass('active');
+		})
+	</script>
+</html>

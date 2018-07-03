@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title>外卖订单管理</title>
+		<script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<header>
+			<div class="back"><span class="icon-font">&#xe61f;</span></div>
+			<div class="title">外卖订单管理</div>
+			<div class="add"><span class="icon-font">&#xe626;</span></div>
+		</header>
+		<div class="container">
+			<div class="head_1"><span>新订单</span><span class="h_1">已确认</span></div>
+			<div class="place_t_2 details" data-isshow='0'>
+				<span>2018-05-06 12:23:25</span><span class="style_1">￥180</span><span>已完成 <span class="icon-font" style="font-size: .15rem;">&#xe62d;</span></span>
+			</div>
+			<div class="none">
+				<div class="place_t_2" style="color: #797979;">
+					<span>梅菜扣肉</span><span>￥50</span><span>X2</span>
+				</div>
+				<div class="place_t_2" style="color: #797979;">
+					<span>肉末粉条</span><span>￥30</span><span>X1</span>
+				</div>
+				<div class="place_t_2" style="color: #797979;">
+					<span>辣子鸡</span><span>￥100</span><span>X1</span>
+				</div>
+				<div class="place_t_1">
+					<span>共4个菜合计：￥180</span>
+				</div>
+				<div class="dizhi">
+					<span>收餐地址：山东省济南市槐荫区大金新苑B区4号楼3单元2301室<p>联系电话：1395647852</p></span>
+				</div>
+			</div>
+			<div class="place_t_2 details" data-isshow='0'>
+				<span>2018-05-06 12:23:25</span><span class="style_1">￥180</span><span>已完成 <span class="icon-font btn1"  style="font-size: .15rem;">&#xe62d;</span></span>
+			</div>
+			<div class="none">
+				<div class="place_t_2" style="color: #797979;">
+					<span>梅菜扣肉</span><span>￥50</span><span>X2</span>
+				</div>
+				<div class="place_t_2" style="color: #797979;">
+					<span>肉末粉条</span><span>￥30</span><span>X1</span>
+				</div>
+				<div class="place_t_2" style="color: #797979;">
+					<span>辣子鸡</span><span>￥100</span><span>X1</span>
+				</div>
+				<div class="place_t_1">
+					<span>共4个菜合计：￥180</span>
+				</div>
+				<div class="dizhi">
+					<span>收餐地址：山东省济南市槐荫区大金新苑B区4号楼3单元2301室<p>联系电话：1395647852</p></span>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="active">
+				<p><span class="icon-font">&#xe613;</span></p>
+				<div class="ft">首页</div>
+			</div>
+			<div>
+				<p><span class="icon-font">&#xe606;</span></p>
+				<p class="ft">购物车</p>
+			</div>
+			<div>
+				<p><span class="icon-font">&#xe602;</span></p>
+				<p class="ft">我的</p>
+			</div>
+		</footer>
+	</body>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/index.js"></script>
+	<script type="text/javascript">
+		window.onload=function (){
+			
+		$(".details").click(function(){
+			var isbtn=$(this).attr('data-isshow');
+			console.log(isbtn)
+			if(isbtn>0){
+				$(this).find('.icon-font').html('&#xe62d;')
+				$(this).next().attr('style','display: none;');
+				$(this).attr('data-isshow','0')
+			}else{
+				$(this).find('.icon-font').html('&#xe62e;');
+				$(this).next().attr('style','display: block;');
+				$(this).attr('data-isshow','1')
+			}
+			
+		})
+		}
+	</script>
+</html>

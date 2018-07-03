@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title>预约订餐</title>
+		<script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+	</head>
+	<style type="text/css">
+		body{
+			background: #EFEFEF;
+		}
+		footer{
+			height: .4rem;
+			background: #a11629;
+			justify-content: space-between;
+		}
+		.car{
+			width: .7rem;
+			padding: 0;
+		}
+		.mondy{
+			margin: 0;
+		}
+		.mondy span{
+			font-size: .25rem;
+		}
+	</style>
+	<body>
+		<header>
+			<div class="back"><span class="icon-font">&#xe61f;</span></div>
+			<div class="title">预约订餐</div>
+			<div class="add"><span class="icon-font">&#xe61c;</span></div>
+		</header>
+		<div class="container">
+			<div style="min-height: 3.7rem;">
+				<div class="all">
+					<div class="waicai" style="display: flex;align-items: center;">
+						商品
+					</div>				
+					<div class="caiinum">数量</div>
+					<div>小计</div>
+				</div>
+				<div class="all">
+					<div class="waicai" style="display: flex;align-items: center;">
+						<div class="img_1" style="margin-right: .05rem;">
+							<img src="img/cai01.png"/>
+						</div>
+						<div>
+							<p style="padding-bottom: .05rem;">红烧肉</p><p class="mooo">38</p>
+						</div>
+					</div>				
+					<div class="caiinum">1</div>
+					<div class="allmone">48</div>
+				</div>
+				<div class="all">
+					<div class="waicai" style="display: flex;align-items: center;">
+						<div class="img_1" style="margin-right: .05rem;">
+							<img src="img/cai01.png"/>
+						</div>
+						<div>
+							<p style="padding-bottom: .05rem;">红烧肉</p><p class="mooo">38</p>
+						</div>
+					</div>				
+					<div class="caiinum">1</div>
+					<div class="allmone">48</div>
+				</div>
+				<div class="all">
+					<div class="waicai" style="display: flex;align-items: center;">
+						<div class="img_1" style="margin-right: .05rem;">
+							<img src="img/cai01.png"/>
+						</div>
+						<div>
+							<p style="padding-bottom: .05rem;">红烧肉</p><p class="mooo">38</p>
+						</div>
+					</div>				
+					<div class="caiinum">1</div>
+					<div class="allmone">48</div>
+				</div>
+				<div class="all">
+					<div class="waicai" style="display: flex;align-items: center;">
+						配送费
+					</div>				
+					<div></div>
+					<div class="allmone">10</div>
+				</div>
+				<div class="all">
+					<div style="display: flex;align-items: center;"></div>				
+					<div class="allmone" style="color: #333;">合计：<span>￥180.00</span></div>
+				</div>
+			</div>
+			<div class="outadd addint">
+				<div class="outleft">用餐时间</div>
+				<div class="outinput"><input type="text" readonly=""  data-options='{}' class="btn01"/></div>
+			</div>
+			<div class="outadd addint">
+				<div class="outleft">用餐地点</div>
+				<div class="outinput yongadd">
+					<div>不限</div>
+					<div>大堂</div>
+					<div class="active">包房</div>
+				</div>
+			</div>
+			<div class="outadd addint">
+				<div class="outleft">用餐人数</div>
+				<div class="outinput" style="display: flex;align-items: center;">
+					<div class="peoplenum"><input type="text" value="5"/></div>
+					<div class="ppright">
+						<div class="lianxi">联系人</div>
+						<div class="lianinput"><input type="text" value="陈先生"/></div>
+					</div>
+				</div>
+			</div>
+			<div class="outadd addint">
+				<div class="outleft">电话</div>
+				<div class="outinput"><input type="text" placeholder="请填写收货人电话"/></div>
+			</div>
+			<div class="outadd addint">
+				<div class="outleft" style="align-self: flex-start;margin-top: .05rem;">附言</div>
+				<div class="outinput"><textarea name="" rows="" cols=""></textarea></div>
+			</div>
+			<div class="jiebtn">
+				<div class="reset">更改购物车</div>
+				<div class="gosuan">提交订单</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/mui.picker.min.js"></script>
+	<script>
+		var dtpicker = new mui.DtPicker({
+		    type: "datetime",//设置日历初始视图模式 
+		    beginDate: new Date(),//设置开始日期 
+		}) 
+		$('.btn01').click(function(){
+			dtpicker.show(function(e) {
+		    	$('.btn01').val(e.text)
+			})
+		})
+		
+		$('.yongadd div').click(function(){
+			var isactive = $(this).attr('class');
+			if(isactive){
+				$(this).removeClass('active');
+			}else{
+				$(this).addClass('active');
+			}
+		})
+		
+		
+	</script>
+</html>

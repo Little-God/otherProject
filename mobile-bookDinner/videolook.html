@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title>视频</title>
+		<script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<header>
+			<div class="back"><span class="icon-font">&#xe61f;</span></div>
+			<div class="title">视频点评</div>
+			<div class="add"><span class="icon-font">&#xe626;</span></div>
+		</header>
+		<div class="container">
+			<div class="lookvideo">
+				<div class="video" id="video_c"></div>
+			</div>
+			<div class="videocao">
+				<div>
+					<div class="iclef"><span class="icon-font">&#xe611;</span></div>
+					<div class="icte">12</div>
+				</div>
+				<div>
+					<div class="iclef"><span class="icon-font">&#xe658;</span></div>
+					<div class="icte">32</div>
+				</div>
+				<div>
+					<div class="iclef"><span class="icon-font">&#xe666;</span></div>
+					<div class="icte">12</div>
+				</div>
+			</div>
+			<ul class="rank" style="border-top: 1px solid #efefef;">
+				<li>
+					<div class="headimg"><img src="img/headimg.png" alt="" /></div>
+					<div>
+						<div class="leftdish">
+							<div>
+								<p class="username">小明</p>
+								<p class="commentmon"><img src="img/start.png" alt="" /></p>
+								<p class="commenttext">到店就能吃！很好吃！下次还来~~~</p>
+							</div>
+							<div class="commenttime">3分钟前</div>
+						</div>
+					</div>
+					
+				</li>
+				<li>
+					<div class="headimg"><img src="img/headimg.png" alt="" /></div>
+					<div>
+						<div class="leftdish">
+							<div>
+								<p class="username">小明</p>
+								<p class="commentmon"><img src="img/start.png" alt="" /></p>
+								<p class="commenttext">到店就能吃！很好吃！下次还来~~~</p>
+							</div>
+							<div class="commenttime">3分钟前</div>
+						</div>
+						<div class="huifu">商家回应：感谢你们对餐厅的支持！</div>
+					</div>
+					
+				</li>
+			</ul>
+		</div>
+		<footer>
+			<div class="active">
+				<p><span class="icon-font">&#xe613;</span></p>
+				<div class="ft">首页</div>
+			</div>
+			<div>
+				<p><span class="icon-font">&#xe606;</span></p>
+				<p class="ft">购物车</p>
+			</div>
+			<div>
+				<p><span class="icon-font">&#xe602;</span></p>
+				<p class="ft">我的</p>
+			</div>
+		</footer>
+	</body>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/ckplayer/ckplayer/ckplayer.js"></script>
+	<script type="text/javascript">
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		var flashvars={
+	        c:0,
+	        p:0,
+	 };
+	    var support = ['all'];
+	    var video_url='http://116.116.56.87:8068/jiaxiao/jiaoshi.mp4';
+	    CKobject.embedHTML5('video_c','ckplayer_a1','100%','180px',[video_url],flashvars,support);
+	</script>
+</html>

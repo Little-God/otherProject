@@ -1,0 +1,14 @@
+{
+	"index.html": {
+		"resources": [
+			"img/index.png",
+			"img/indexheadimg.png",
+			"img/left.png",
+			"img/conicon.png",
+			"img/right.png"
+		],
+		"refer": [
+			"ranking.html"
+		]
+	}
+}

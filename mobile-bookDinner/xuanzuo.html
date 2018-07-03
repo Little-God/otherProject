@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title>选座</title>
+		<script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<style type="text/css">
+		.xuan{
+			overflow: auto;
+			width: 100%;
+			height: 2.5rem;
+		}
+		/*.xuanzuoimg{
+			background: url(img/xuanzuo.png) no-repeat;
+			width: 720px;
+			height: 853px;
+		}*/
+		.xuanzuoimg{
+			background: url(img/xuanzuo.png) no-repeat;
+			background-size: 100% 100%;
+			width: 720px;
+			height: 853px;
+			position: relative;
+		}
+		.zuo01{
+			position: absolute;
+			left: 6.9%;
+			top: 35%;
+			width: 3%;
+			height: 2.5%;
+			background: red;
+			border-radius: 50%;
+		}
+	</style>
+	<body>
+		<header>
+			<div class="back"><span class="icon-font">&#xe61f;</span></div>
+			<div class="title">选座</div>
+			<div class="add"><span class="icon-font">&#xe626;</span></div>
+		</header>
+		<div class="container">
+			<div class="xuan">
+				<div class="fangda"><span class="icon-font"></span></div>
+				<div class="fangxiao"><span class="icon-font"></span></div>
+				<div class="xuanzuoimg">
+					<div class="zuo01"></div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="active">
+				<p><span class="icon-font">&#xe613;</span></p>
+				<div class="ft">首页</div>
+			</div>
+			<div>
+				<p><span class="icon-font">&#xe606;</span></p>
+				<p class="ft">购物车</p>
+			</div>
+			<div>
+				<p><span class="icon-font">&#xe602;</span></p>
+				<p class="ft">我的</p>
+			</div>
+		</footer>
+	</body>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/index.js"></script>
+</html>

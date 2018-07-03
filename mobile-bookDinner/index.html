@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>餐饮首页</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+	<div class="indexcontainer">
+		<div class="content">
+			<div class="flashl"></div>
+			<div class="flashr"></div>
+			<div class="context">前往商城</div>
+			<div class="conicon"><img src="img/conicon.png" alt="" /></div>
+			<div class="slide">
+				<div class="left">
+					<div class="leftimg" style="margin-right: .09rem;"><img src="img/left.png" alt="" /></div>
+					<div>
+						<p class="diantitle">点餐</p>
+						<p class="prom">在线点餐</p>
+					</div>
+				</div>
+				<div class="indexheadimg"><img src="img/indexheadimg.png" alt="" /></div>
+				<div class="right">
+					<div>
+						<p class="diantitle" style="padding-left: .04rem;">商城</p>
+						<p class="prom">外卖与农产品</p>
+					</div>
+					<div class="rightimg" style="width: .35rem;margin-left: .05rem;"><img src="img/right.png" alt="" /></div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+	mui.init();
+	$('.indexcontainer').css('height',$(window).height()+'px');
+	window.addEventListener('load', function() {
+        var initY; //触摸位置
+        var moveY; //滑动时的位置
+        var Y = 0; //移动距离
+        var objY = 0; //目标对象位置
+        document.querySelector('.content').addEventListener('touchstart', function(event) {
+            event.preventDefault();
+            console.log(event.target.className)
+            var obj = event.target.parentNode;
+            if (obj.className == "content") {
+                initY = event.targetTouches[0].pageY;
+                objY = (obj.style.WebkitTransform.replace(/translateY\(/g, "").replace(/px\)/g, "")) * 1;
+            }
+            if (objY == 0) {
+                window.addEventListener('touchmove', function(event) {
+                    event.preventDefault();
+                    var obj = event.target.parentNode;
+                    if (obj.className == "content") {
+                        moveY = event.targetTouches[0].pageY;
+                        Y = moveY - initY;
+                        if (Y >= 0) {
+                            obj.style.WebkitTransform = "translateY(" + 0 + "px)";
+                        } else if (Y < 0) {
+                            var l = Math.abs(Y);
+                            obj.style.WebkitTransform = "translateY(" + -l + "px)";
+                            if (l > 300) {
+                                l = 300;
+                                obj.style.WebkitTransform = "translateY(" + -l + "px)";
+                            }
+                        }
+                    }
+                });
+            } else if (objY < 0) {
+                window.addEventListener('touchmove', function(event) {
+                    event.preventDefault();
+                    var obj = event.target.parentNode;
+                    if (obj.className == "content") {
+                        moveY = event.targetTouches[0].pageY;
+                        Y = moveY - initY;
+                        if (Y >= 0) {
+                            var r = -300 + Math.abs(Y);
+                            obj.style.WebkitTransform = "translateY(" + r + "px)";
+                            if (r > 0) {
+                                r = 0;
+                                obj.style.WebkitTransform = "translateY(" + r + "px)";
+                            }
+                        } else { //向左滑动
+                            obj.style.WebkitTransform = "translateY(" + -300 + "px)";
+                        }
+                    }
+                });
+            }
+
+        })
+        document.querySelector('.content').addEventListener('touchend', function(event) {
+            event.preventDefault();
+            var obj = event.target.parentNode;
+            if (obj.className == "content"&&event.target.className=='flashl') {
+                objY = (obj.style.WebkitTransform.replace(/translateY\(/g, "").replace(/px\)/g, "")) * 1;
+                if (objY > -150) {
+                    obj.style.WebkitTransform = "translateY(" + 0 + "px)";
+                    objY = 0;
+                } else {
+                	mui.openWindow({
+						url:'ranking.html',
+						extras:{
+							name:'mui'  //扩展参数
+						}
+					});
+                    obj.style.WebkitTransform = "translateY(" + -300 + "px)";
+                    objY = -300;
+                }
+            }else if(obj.className == "content"&&event.target.className=='flashr'){
+            	objY = (obj.style.WebkitTransform.replace(/translateY\(/g, "").replace(/px\)/g, "")) * 1;
+                if (objY > -150) {
+                    obj.style.WebkitTransform = "translateY(" + 0 + "px)";
+                    objY = 0;
+                } else {
+                	mui.openWindow({
+						url:'envir.html',
+						extras:{
+							name:'mui'  //扩展参数
+						}
+					});
+                    obj.style.WebkitTransform = "translateY(" + -300 + "px)";
+                    objY = -300;
+                }
+            }
+        })
+    })
+</script>
+</html>

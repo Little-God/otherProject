@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title>菜品列表</title>
+		<script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<style>
+		
+		.mui-row.mui-fullscreen>[class*="mui-col-"] {
+				height: 100%;
+			}
+			.mui-col-xs-3,
+			.mui-control-content {
+				overflow-y: auto;
+				height: 100%;
+			}
+			.mui-segmented-control .mui-control-item {
+				position: relative;
+				line-height: 50px;
+				width: 100%;
+			}
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				background-color: #fff;
+			}
+			
+			
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+				color: #903;
+			}
+			.mui-badge{
+				position: absolute;
+				top: 2px;
+				right: 2px;
+			}
+			.mui-segmented-control{
+				font-size: .13rem;
+			}
+			footer{
+				height: .4rem;
+				background: #a11629;
+				justify-content: space-between;
+			}
+			.topimg a {
+			    width: 1.4rem;
+			    height: 1.3rem;
+			}
+			.topimg a img{
+			    width: 100%;
+			    height: 100%;
+			}
+			.mui-table-view-cell:after{left:0}
+	</style>
+	<body>
+		<header>
+			<div class="back"><span class="icon-font">&#xe61f;</span></div>
+			<div class="title">菜品列表</div>
+			<div class="add"><span class="icon-font">&#xe626;</span></div>
+		</header>
+		<div class="container">
+			<div class="topimg">
+				<a><img src="img/envir02.png" alt="" /></a>
+				<a><img src="img/envir02.png" alt="" /></a>
+			</div>
+			<div class="mui-content mui-row mui-fullscreen" style="top: 1.9rem;bottom: .4rem;">
+				<div class="mui-col-xs-3">
+					<div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+						<a class="mui-control-item mui-active" href="#content1">热门推荐</a>
+						<a class="mui-control-item" href="#content2">镇江汤包<span class="mui-badge mui-badge-danger">4</span></a>
+						<a class="mui-control-item" href="#content3">开胃凉菜</a>
+					</div>
+				</div>
+				<div id="segmentedControlContents" class="mui-col-xs-9" style="border-left: 1px solid #c8c7cc;">
+					<div id="content1" class="mui-control-content mui-active">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell cailist">
+								<div class="caiimg"><img src="img/cai01.png" alt="" /></div>
+								<div class="caitext">
+									<div class="cainame">自制冻肉01</div>
+									<div class="caimoney">￥<span>28.0</span></div>
+									<div class="addnum addcai"><span class="icon-font">&#xe608;</span></div>
+									<!--下面的是减-->
+									<!--<div class="addnum addcai"><span class="icon-font">&#xe643;</span></div>-->
+								</div>
+							</li>
+							<li class="mui-table-view-cell cailist">
+								<div class="caiimg"><img src="img/cai01.png" alt="" /></div>
+								<div class="caitext">
+									<div class="cainame">自制冻肉01</div>
+									<div class="caimoney">￥<span>28.0</span></div>
+									<div class="addnum addcai"><span class="icon-font">&#xe608;</span></div>
+									<!--下面的是减-->
+									<!--<div class="addnum addcai"><span class="icon-font">&#xe643;</span></div>-->
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="content2" class="mui-control-content">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell cailist">
+								<div class="caiimg"><img src="img/cai01.png" alt="" /></div>
+								<div class="caitext">
+									<div class="cainame">自制冻肉02</div>
+									<div class="caimoney">￥<span>28.0</span></div>
+									<div class="addnum addcai"><span class="icon-font">&#xe608;</span></div>
+									<!--下面的是减-->
+									<!--<div class="addnum addcai"><span class="icon-font">&#xe643;</span></div>-->
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="content3" class="mui-control-content">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell cailist">
+								<div class="caiimg"><img src="img/cai01.png" alt="" /></div>
+								<div class="caitext">
+									<div class="cainame">自制冻肉03</div>
+									<div class="caimoney">￥<span>28.0</span></div>
+									<div class="addnum addcai"><span class="icon-font">&#xe608;</span></div>
+									<!--下面的是减-->
+									<!--<div class="addnum addcai"><span class="icon-font">&#xe643;</span></div>-->
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="fleft">
+				<div class="car"><img src="img/car.png" alt="" /><p class="bud">3</p></div>
+				<div class="mondy">
+					<p>￥<span>168.0</span></p>
+					<p class="mormondy">另需外送费：￥8.0</p>
+				</div>
+			</div>
+			<div class="isok">选好了<span class="icon-font">&#xe620;</span></div>
+		</footer>
+	</body>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+		var slider = mui("#slider");
+		slider.slider({
+			interval: 5000
+		});
+	</script>
+</html>

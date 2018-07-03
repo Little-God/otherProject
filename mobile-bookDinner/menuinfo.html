@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title>菜单明细</title>
+		<script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<header>
+			<div class="back"><span class="icon-font">&#xe61f;</span></div>
+			<div class="title">已点菜单</div>
+			<div class="add"><span class="icon-font">&#xe61c;</span></div>
+		</header>
+		<div class="container">
+			<ul class="alreadymenu">
+				<li>
+					<div class="dishname">鱼香肉丝</div>
+					<div class="dishmoney">￥40/份</div>
+					<div class="num">
+						<div class="minus"><span class="icon-font">&#xe643;</span></div>
+						<div class="numtext">1</div>
+						<div class="addnum"><span class="icon-font">&#xe608;</span></div>
+					</div>
+				</li>
+				<li>
+					<div class="dishname">鱼香肉丝</div>
+					<div class="dishmoney">￥40/份</div>
+					<div class="num">
+						<div class="minus"><span class="icon-font">&#xe643;</span></div>
+						<div class="numtext">1</div>
+						<div class="addnum"><span class="icon-font">&#xe608;</span></div>
+					</div>
+				</li>
+				<li>
+					<div class="dishname">鱼香肉丝</div>
+					<div class="dishmoney">￥40/份</div>
+					<div class="num">
+						<div class="minus"><span class="icon-font">&#xe643;</span></div>
+						<div class="numtext">1</div>
+						<div class="addnum"><span class="icon-font">&#xe608;</span></div>
+					</div>
+				</li>
+			</ul>
+			<div class="all">
+				<div style="display: flex;align-items: center;"></div>				
+				<div class="allmone" style="color: #333;">餐费总价：<span>￥180.00</span></div>
+			</div>
+		</div>
+		<footer>
+			<div class="active">
+				<p><span class="icon-font">&#xe613;</span></p>
+				<div class="ft">首页</div>
+			</div>
+			<div>
+				<p><span class="icon-font">&#xe606;</span></p>
+				<p class="ft">购物车</p>
+			</div>
+			<div>
+				<p><span class="icon-font">&#xe602;</span></p>
+				<p class="ft">我的</p>
+			</div>
+		</footer>
+	</body>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+		$('.addnum').click(function(){
+			var docnum = $(this).prev();
+			var nownum = parseInt(docnum.text());
+			docnum.text(nownum+1)
+		})
+		$('.minus').click(function(){
+			var docnum = $(this).next();
+			var nownum = parseInt(docnum.text());
+			if(nownum!==1){
+				docnum.text(nownum-1)
+			}
+		})
+	</script>
+</html>

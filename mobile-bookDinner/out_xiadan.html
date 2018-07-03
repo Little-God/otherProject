@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title>外卖订单确认</title>
+		<script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<style type="text/css">
+		body{
+			background: #EFEFEF;
+		}
+		footer{
+			height: .4rem;
+			background: #a11629;
+			justify-content: space-between;
+		}
+		.car{
+			width: .7rem;
+			padding: 0;
+		}
+		.mondy{
+			margin: 0;
+		}
+		.mondy span{
+			font-size: .25rem;
+		}
+	</style>
+	<body>
+		<header>
+			<div class="back"><span class="icon-font">&#xe61f;</span></div>
+			<div class="title">订单确认</div>
+			<div class="add"><span class="icon-font">&#xe61c;</span></div>
+		</header>
+		<div class="container">
+			<div style="min-height: 3.7rem;">
+				<div class="all">
+					<div class="waicai" style="display: flex;align-items: center;">
+						商品
+					</div>				
+					<div class="caiinum">数量</div>
+					<div>小计</div>
+				</div>
+				<div class="all">
+					<div class="waicai" style="display: flex;align-items: center;">
+						<div class="img_1" style="margin-right: .05rem;">
+							<img src="img/cai01.png"/>
+						</div>
+						<div>
+							<p style="padding-bottom: .05rem;">红烧肉</p><p class="mooo">38</p>
+						</div>
+					</div>				
+					<div class="caiinum">1</div>
+					<div class="allmone">48</div>
+				</div>
+				<div class="all">
+					<div class="waicai" style="display: flex;align-items: center;">
+						<div class="img_1" style="margin-right: .05rem;">
+							<img src="img/cai01.png"/>
+						</div>
+						<div>
+							<p style="padding-bottom: .05rem;">红烧肉</p><p class="mooo">38</p>
+						</div>
+					</div>				
+					<div class="caiinum">1</div>
+					<div class="allmone">48</div>
+				</div>
+				<div class="all">
+					<div class="waicai" style="display: flex;align-items: center;">
+						<div class="img_1" style="margin-right: .05rem;">
+							<img src="img/cai01.png"/>
+						</div>
+						<div>
+							<p style="padding-bottom: .05rem;">红烧肉</p><p class="mooo">38</p>
+						</div>
+					</div>				
+					<div class="caiinum">1</div>
+					<div class="allmone">48</div>
+				</div>
+				<div class="all">
+					<div class="waicai" style="display: flex;align-items: center;">
+						配送费
+					</div>				
+					<div></div>
+					<div class="allmone">10</div>
+				</div>
+				<div class="all">
+					<div style="display: flex;align-items: center;"></div>				
+					<div class="allmone" style="color: #333;">合计：<span>￥180.00</span></div>
+				</div>
+			</div>
+			<div class="outadd addint">
+				<div class="outleft">配送到</div>
+				<div class="outinput"><input type="text" placeholder="请填写配送地址"/></div>
+			</div>
+			<div class="outadd addint">
+				<div class="outleft">电话</div>
+				<div class="outinput"><input type="text" placeholder="请填写收货人电话"/></div>
+			</div>
+			<div class="outadd addint">
+				<div class="outleft" style="align-self: flex-start;margin-top: .05rem;">附言</div>
+				<div class="outinput"><textarea name="" rows="" cols=""></textarea></div>
+			</div>
+			<div class="outadd addint">
+				<div style="width: .9rem;display: flex;align-content: center;margin-top.05rem;align-self: flex-start;"><input type="checkbox" class="ischeck"/> 确认订单</div>
+				<div class="outinput" style="color: #999;font-size: .11rem;">(确认后无法取消该订单，5分钟后系统自动 确认，如需取消电话联系我们)</div>
+				
+			</div>
+			<div class="jiebtn">
+				<div class="reset">更改购物车</div>
+				<div class="gosuan">提交订单</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/index.js"></script>
+</html>

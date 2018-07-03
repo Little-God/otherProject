@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title>外卖订单确认</title>
+		<script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<style type="text/css">
+		body{
+			background: #EFEFEF;
+		}
+		footer{
+			height: .4rem;
+			background: #a11629;
+			justify-content: space-between;
+		}
+		.car{
+			width: .7rem;
+			padding: 0;
+		}
+		.mondy{
+			margin: 0;
+		}
+		.mondy span{
+			font-size: .25rem;
+		}
+	</style>
+	<body>
+		<header>
+			<div class="back"><span class="icon-font">&#xe61f;</span></div>
+			<div class="title">订单确认</div>
+			<div class="add"><span class="icon-font">&#xe61c;</span></div>
+		</header>
+		<div class="container">
+			<div class="all">
+				<div style="display: flex;align-items: center;">
+					<div class="img_1">
+						<img src="img/cai01.png"/>
+					</div>
+					<div>
+						<p style="padding-bottom: .05rem;">红烧肉</p><p class="mooo">￥<span>38</span></p>
+					</div>
+				</div>				
+				<div class="num">
+					<div class="minus"><span class="icon-font">&#xe643;</span></div>
+					<div class="numtext">1</div>
+					<div class="addnum"><span class="icon-font">&#xe608;</span></div>
+				</div>
+			</div>
+			
+		</div>
+		<footer>
+			<div class="fleft">
+				<div class="car">餐费总价：</div>
+				<div class="mondy">
+					<p>￥<span>360.0</span></p>
+				</div>
+			</div>
+			<div class="isok">结算<span class="icon-font">&#xe620;</span></div>
+		</footer>
+	</body>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+		$('.addnum').click(function(){
+			var docnum = $(this).prev();
+			var nownum = parseInt(docnum.text());
+			docnum.text(nownum+1)
+		})
+		$('.minus').click(function(){
+			var docnum = $(this).next();
+			var nownum = parseInt(docnum.text());
+			if(nownum!==1){
+				docnum.text(nownum-1)
+			}
+		})
+	</script>
+</html>

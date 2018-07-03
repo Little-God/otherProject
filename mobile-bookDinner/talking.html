@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title>热门话题讨论区</title>
+		<script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<style>
+		.commenttitle{
+			display: flex;
+			justify-content: space-between;
+			padding: 0 5%;
+			border: none;
+			margin-top: .1rem;
+		}
+		.commenttitle span{
+			color: #333;
+			padding: .05rem .1rem;
+			background-color: #f3f3f3;
+			margin-right: .1rem;
+		}
+		.talktext{
+			width: 2.5rem;
+			border-bottom: 1px solid #efefef;
+			padding-bottom: .1rem;
+		}
+		.rank li{
+			border: none;
+		}
+		.taklbot{
+			display: flex;
+			justify-content: space-between;
+			color: #999;
+			font-size: .11rem;
+			margin-top: .08rem;
+		}
+		.taklright{
+			display: flex;
+			align-items: center;
+		}
+		.taklleft span{
+			margin-right: .05rem;
+		}
+		.titright{
+			background: #ff8b3d;
+			width: 1rem;
+			height: .3rem;
+			line-height: .3rem;
+			text-align: center;
+			color: #fff;
+		}
+	</style>
+	<body>
+		<header>
+			<div class="back"><span class="icon-font">&#xe61f;</span></div>
+			<div class="title">热门话题讨论区</div>
+			<div class="add"><span class="icon-font">&#xe61c;</span></div>
+		</header>
+		<div class="container">
+			<div class="commenttitle">
+				<div class="titleft">
+					<span class="tui">推荐</span>最新主题
+				</div>
+				<div class="titright">发表新主题</div>
+			</div>
+			<ul class="rank">
+				<li>
+					<div class="headimg"><img src="img/headimg.png" alt="" /></div>
+					<div class="talktext">
+						<p>东风浩荡解放后的积分换地方和大黄蜂的</p>
+						<div class="taklbot">
+							<div class="taklleft"><span>小米社区</span><span>2分钟前</span><span>来自pc</span></div>
+							<div class="taklright"><div style="margin-bottom: -.05rem;"><span class="icon-font">&#xe8d4;</span></div>1325</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="headimg"><img src="img/headimg.png" alt="" /></div>
+					<div class="talktext">
+						<p>东风浩荡解放后的积分换地方和大黄蜂的东风浩荡解放后的积分换地方和大黄蜂的</p>
+						<div class="taklbot">
+							<div class="taklleft"><span>小米社区</span><span>2分钟前</span><span>来自pc</span></div>
+							<div class="taklright"><div style="margin-bottom: -.05rem;"><span class="icon-font">&#xe8d4;</span></div>1325</div>
+						</div>
+					</div>
+				</li>
+				
+			</ul>
+		</div>
+		<footer>
+			<div class="active">
+				<p><span class="icon-font">&#xe613;</span></p>
+				<div class="ft">首页</div>
+			</div>
+			<div>
+				<p><span class="icon-font">&#xe606;</span></p>
+				<p class="ft">购物车</p>
+			</div>
+			<div>
+				<p><span class="icon-font">&#xe602;</span></p>
+				<p class="ft">我的</p>
+			</div>
+		</footer>
+	</body>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/index.js"></script>
+</html>

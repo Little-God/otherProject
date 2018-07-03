@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title>外卖订单确认</title>
+		<script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<style type="text/css">
+		#none{
+			display: none;
+			background: #efefef;
+		}
+		.choii{
+			margin-right: .4rem;
+			display: flex;
+			align-items: center;
+			padding: .1rem;
+		}
+		.choii span{
+			display: block;
+		}
+		.choii.active{
+			color: #A11629; 
+		}
+		.choii .icon-font{
+			margin-bottom: -.05rem;
+			margin-right: .02rem;
+		}
+	</style>
+	<body>
+		<header>
+			<div class="back"><span class="icon-font">&#xe61f;</span></div>
+			<div class="title">外卖订单确认</div>
+			<div class="add"><span class="icon-font">&#xe626;</span></div>
+		</header>
+		<div class="container">
+			<div class="xinxi xinxi1 details" data-isshow='0'><span>收货人信息</span><span class="icon-font btn1">&#xe62d;</span></div>
+			<div id="none">
+				<div class="xinxi_1"><span style="margin-right: .3rem;">收货人：许克夏</span><span>电话：13791125571</span></div>
+				<div class="xinxi_1"><span>收货地址：山东省济南市槐荫区大金新苑B区4号楼3单元2301室</span></div>
+			</div>
+			<div class="xinxi xinxi2 details" data-isshow='0'><span>订单明细</span><span class="icon-font btn2">&#xe62d;</span></div>
+			<div id="none">
+				<div class="place_t_2" style="color: #797979;">
+					<span>梅菜扣肉</span><span>￥50</span><span>X2</span>
+				</div>
+				<div class="place_t_2" style="color: #797979;">
+					<span>肉末粉条</span><span>￥30</span><span>X1</span>
+				</div>
+				<div class="place_t_1">
+					<span>共3个菜合计：￥130</span>
+				</div>
+				<div class="dizhi">
+					<span>备注：越辣越好！不要香菜，少放葱！</span>
+				</div>
+			</div>
+			<div class="xinxi xinxi3" data-isshow='0'><span>支付方式</span><span class="icon-font btn3">&#xe62d;</span></div>
+			<div id="none">
+				<div class="choii active">
+					<span class="icon-font size">&#xe6ce;</span><span>货到付款</span>
+				</div>
+				<div class="choii">
+					<span class="icon-font size">&#xe64d;</span><span>微信支付</span>
+				</div>
+			</div>
+		</div>
+		<footer style="background: #fff; height: 1.23rem;">
+			<button class="btn_a" style="background: #A11629;">提交订单</button>
+		</footer>
+	</body>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/index.js"></script>
+	<script type="text/javascript">
+		window.onload=function (){
+			
+			$(".details").click(function(){
+				var isbtn=$(this).attr('data-isshow');
+				console.log(isbtn)
+				if(isbtn>0){
+					$(this).find('.icon-font').html('&#xe62d;')
+					$(this).next().attr('style','display: none;');
+					$(this).attr('data-isshow','0')
+				}else{
+					$(this).find('.icon-font').html('&#xe62e;');
+					$(this).next().attr('style','display: block;');
+					$(this).attr('data-isshow','1')
+				}
+				
+			})
+			$(".xinxi3").click(function(){
+				var isbtn=$(this).attr('data-isshow');
+				console.log(isbtn)
+				if(isbtn>0){
+					$(this).find('.icon-font').html('&#xe62d;')
+					$(this).next().attr('style','display: none;');
+					$(this).attr('data-isshow','0')
+				}else{
+					$(this).find('.icon-font').html('&#xe62e;');
+					$(this).next().attr('style','display: flex;');
+					$(this).attr('data-isshow','1')
+				}
+				
+			})
+			
+			$('.choii').click(function(){
+				$('.choii').removeClass('active');
+				$('.choii').find('.icon-font').html('&#xe64d;');
+				$(this).addClass('active');
+				$(this).find('.icon-font').html('&#xe6ce;');
+			})
+		}
+	</script>
+</html>

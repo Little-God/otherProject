@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<title>会员登录</title>
+		<script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<header>
+			<div class="back"><span class="icon-font">&#xe61f;</span></div>
+			<div class="title">会员登录</div>
+			<div class="add"><span class="icon-font">&#xe61c;</span></div>
+		</header>
+		<style>
+			body{
+				background: #efefef;
+			}
+		</style>
+		<div class="container">
+			<div class="logincon">
+				<div class="tel"><span class="icon-font">&#xe617;</span><input type="text" class="loginput" placeholder="请输入手机号"/></div>
+				<div class="tel"><span class="icon-font">&#xe657;</span><input type="password" class="loginput" placeholder="请输入密码"/><span class="icon-font show1">&#xe8d5;</span></div>
+				<div class="confirm1">登录</div>
+				<div class="logother">
+					<p>快速注册</p>
+					<p>忘记密码？</p>
+				</div>
+				<div class="loginmore">
+					<p>更多方式</p>
+					<div class="teng">
+						<div><span class="icon-font" style="color: #29a4f2;">&#xe614;</span></div>
+						<div><span class="icon-font" style="color: #2cbf19;">&#xe654;</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+		var isshow=true;
+		$(".show1").click(function(){
+			if(isshow){
+				$(this).html('&#xe8d4;')
+				$('onne')
+				isshow = false;
+			}else{
+				$(this).html('&#xe8d5;')
+				$(this).prev().attr('type','password');
+				isshow = true;
+			}
+			
+		})
+	</script>
+</html>
