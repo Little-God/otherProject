@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>装修经验</title>
+    <link rel="stylesheet" href="css/comment.css">
+</head>
+<style>
+    body{
+        background: #f5f5f5;
+    }
+    .h_75{
+        width: 100%;
+        min-width: 1200px;
+        padding: 0 20px;
+    }
+</style>
+<body>
+<header>
+    <div class="h_75 d_flex color4">
+        <div class="headleft d_flex"><div class="logo_img"><img src="img/logo.png" alt=""></div><div class="logotext">蓉易住</div></div>
+        <div class="dir_top"><div class="bianjititle w_820">装修日记 <span>编辑中</span></div></div>
+        <div class="d_flex btncao w_470">
+            <div class="liulanmobile"><span class="icon-font">&#xe60f;</span>浏览手机版</div>
+            <div class="savecao">保存草稿</div>
+            <div class="btngroup">发布装修日记</div>
+        </div>
+    </div>
+</header>
+<div class="catalog">
+    <div class="catatitle">目录</div>
+    <div class="something">
+        <div class="some01">封面</div>
+        <div class="some01">房屋信息</div>
+        <div class="some01 d_flex"><div>空间展示</div><div class="adicon"><img src="img/addimg.png" alt=""></div></div>
+        <ul class="hulist">
+            <li class="active"><a href="#type1"><div>户型图</div></a></li>
+            <li><a href="#type2"><div>玄关</div></a></li>
+            <li><a href="#type3"><div>客厅</div></a></li>
+            <li><a href="#type4"><div>厨房</div></a></li>
+            <li><a href="#type5"><div>餐厅</div></a></li>
+            <li><a href="#type6"><div>卫生间</div></a></li>
+            <li><a href="#type7"><div>卧室</div></a></li>
+            <li><a href="#type8"><div>书房</div></a></li>
+            <li><a href="#type9"><div>儿童房</div></a></li>
+            <li><a href="#type10"><div>衣帽间</div></a></li>
+            <li><a href="#type11"><div>阳台</div></a></li>
+            <li><a href="#type12"><div>走廊</div></a></li>
+            <!--<div><input type="text" class="addinput"></div>-->
+        </ul>
+    </div>
+</div>
+<div class="diary_container">
+    <div class="exp_container photo" id="filePicker">
+        <div class="img_icon"><span class="icon-font">&#xe719;</span></div>
+        <div class="f_20">点击添加封面图片</div>
+        <div class="f_17">建议使用清晰度较高的图片</div>
+        <div class="f_17">建议尺寸900*500像素</div>
+    </div>
+    <div class="exp_container exp_title">
+        <input type="text" class="ex_input ex_tit" placeholder="添加标题(建议控制在20字以内)">
+        <div class="f_20">说在前面</div>
+        <div>
+            <textarea name="" id="sayqian" cols="30" rows="2" class="ex_input f_17 b_b" placeholder="可以谈谈购房时的经历、装修过程中的教训、以及入住后想和住友们分享的居住体验等"></textarea>
+        </div>
+        <div class="showdiary">
+            <div class="f_20">房屋信息</div>
+            <div class="ad_con">
+                <section class="ad_text" id="fangtext">
+                    <dl>
+                        <dt>户型</dt>
+                        <dd>二室</dd>
+                    </dl>
+                    <dl>
+                        <dt>使用面积</dt>
+                        <dd>80平米</dd>
+                    </dl>
+                    <dl>
+                        <dt>房屋位置</dt>
+                        <dd>四川  成都</dd>
+                    </dl>
+                    <dl>
+                        <dt>装修花费</dt>
+                        <dd>30.00万元</dd>
+                    </dl>
+                </section>
+                <a class="changeicon"><img src="img/changeicon.png" alt=""></a>
+            </div>
+        </div>
+        <div class="showdiary">
+            <div class="f_20">空间展示 <span class="f_sp">（尽量每个空间都上传2-3张图，无内容的默认空间最终将不显示，无需删除。）</span></div>
+            <div class="ad_con" id="#type1">
+                <section class="ad_text">
+                    <div class="flex_c">
+                        <div class="kong_title">
+                            <div class="kong_line"></div>
+                            <div>户型图</div>
+                            <div class="kong_line"></div>
+                        </div>
+                    </div>
+                    <div class="addcon"></div>
+                    <div class="kong_addimg flex_c">
+                        <div class="d_flex_s">
+                            <div class="adimg"><img src="img/addimg.png" alt=""></div>
+                            <div>添加图片</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="ad_con" id="#type2">
+                <section class="ad_text">
+                    <div class="flex_c">
+                        <div class="kong_title">
+                            <div class="kong_line"></div>
+                            <div>玄关</div>
+                            <div class="kong_line"></div>
+                        </div>
+                    </div>
+                    <div class="addcon"></div>
+                    <div class="kong_addimg flex_c">
+                        <div class="d_flex_s">
+                            <div class="adimg"><img src="img/addimg.png" alt=""></div>
+                            <div>添加图片</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="ad_con" id="#type3">
+                <section class="ad_text">
+                    <div class="flex_c">
+                        <div class="kong_title">
+                            <div class="kong_line"></div>
+                            <div>客厅</div>
+                            <div class="kong_line"></div>
+                        </div>
+                    </div>
+                    <div class="addcon"></div>
+                    <div class="kong_addimg flex_c">
+                        <div class="d_flex_s">
+                            <div class="adimg"><img src="img/addimg.png" alt=""></div>
+                            <div>添加图片</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="ad_con" id="#type4">
+                <section class="ad_text">
+                    <div class="flex_c">
+                        <div class="kong_title">
+                            <div class="kong_line"></div>
+                            <div>厨房</div>
+                            <div class="kong_line"></div>
+                        </div>
+                    </div>
+                    <div class="addcon"></div>
+                    <div class="kong_addimg flex_c">
+                        <div class="d_flex_s">
+                            <div class="adimg"><img src="img/addimg.png" alt=""></div>
+                            <div>添加图片</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="ad_con" id="#type5">
+                <section class="ad_text">
+                    <div class="flex_c">
+                        <div class="kong_title">
+                            <div class="kong_line"></div>
+                            <div>餐厅</div>
+                            <div class="kong_line"></div>
+                        </div>
+                    </div>
+                    <div class="addcon"></div>
+                    <div class="kong_addimg flex_c">
+                        <div class="d_flex_s">
+                            <div class="adimg"><img src="img/addimg.png" alt=""></div>
+                            <div>添加图片</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="ad_con" id="#type6">
+                <section class="ad_text">
+                    <div class="flex_c">
+                        <div class="kong_title">
+                            <div class="kong_line"></div>
+                            <div>卫生间</div>
+                            <div class="kong_line"></div>
+                        </div>
+                    </div>
+                    <div class="addcon"></div>
+                    <div class="kong_addimg flex_c">
+                        <div class="d_flex_s">
+                            <div class="adimg"><img src="img/addimg.png" alt=""></div>
+                            <div>添加图片</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="ad_con" id="#type7">
+                <section class="ad_text">
+                    <div class="flex_c">
+                        <div class="kong_title">
+                            <div class="kong_line"></div>
+                            <div>卧室</div>
+                            <div class="kong_line"></div>
+                        </div>
+                    </div>
+                    <div class="addcon"></div>
+                    <div class="kong_addimg flex_c">
+                        <div class="d_flex_s">
+                            <div class="adimg"><img src="img/addimg.png" alt=""></div>
+                            <div>添加图片</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="ad_con" id="#type8">
+                <section class="ad_text">
+                    <div class="flex_c">
+                        <div class="kong_title">
+                            <div class="kong_line"></div>
+                            <div>书房</div>
+                            <div class="kong_line"></div>
+                        </div>
+                    </div>
+                    <div class="addcon"></div>
+                    <div class="kong_addimg flex_c">
+                        <div class="d_flex_s">
+                            <div class="adimg"><img src="img/addimg.png" alt=""></div>
+                            <div>添加图片</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="ad_con" id="#type9">
+                <section class="ad_text">
+                    <div class="flex_c">
+                        <div class="kong_title">
+                            <div class="kong_line"></div>
+                            <div>儿童房</div>
+                            <div class="kong_line"></div>
+                        </div>
+                    </div>
+                    <div class="addcon"></div>
+                    <div class="kong_addimg flex_c">
+                        <div class="d_flex_s">
+                            <div class="adimg"><img src="img/addimg.png" alt=""></div>
+                            <div>添加图片</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="ad_con" id="#type10">
+                <section class="ad_text">
+                    <div class="flex_c">
+                        <div class="kong_title">
+                            <div class="kong_line"></div>
+                            <div>衣帽间</div>
+                            <div class="kong_line"></div>
+                        </div>
+                    </div>
+                    <div class="addcon"></div>
+                    <div class="kong_addimg flex_c">
+                        <div class="d_flex_s">
+                            <div class="adimg"><img src="img/addimg.png" alt=""></div>
+                            <div>添加图片</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="ad_con" id="#type11">
+                <section class="ad_text">
+                    <div class="flex_c">
+                        <div class="kong_title">
+                            <div class="kong_line"></div>
+                            <div>阳台</div>
+                            <div class="kong_line"></div>
+                        </div>
+                    </div>
+                    <div class="addcon"></div>
+                    <div class="kong_addimg flex_c">
+                        <div class="d_flex_s">
+                            <div class="adimg"><img src="img/addimg.png" alt=""></div>
+                            <div>添加图片</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="ad_con" id="#type12">
+                <section class="ad_text">
+                    <div class="flex_c">
+                        <div class="kong_title">
+                            <div class="kong_line"></div>
+                            <div>走廊</div>
+                            <div class="kong_line"></div>
+                        </div>
+                    </div>
+                    <div class="addcon"></div>
+                    <div class="kong_addimg flex_c">
+                        <div class="d_flex_s">
+                            <div class="adimg"><img src="img/addimg.png" alt=""></div>
+                            <div>添加图片</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="showmob">
+        <div class="mobilemask"></div>
+        <div class="mob">
+            <div class="container mobile_con">
+                <div class="delmobile color8"><span class="icon-font">&#xe601;</span></div>
+                <div class="mobileexp">
+                    <div class="mobile_content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="savemask">
+        <div class="save_btn">已保存</div>
+    </div>
+</div>
+
+
+</body>
+<script src="js/jquery-1.7.2.min.js"></script>
+<!--引入CSS-->
+<link rel="stylesheet" href="webuploader/webuploader.min.css">
+<!--引入JS-->
+<script type="text/javascript" src="webuploader/webuploader.js"></script>
+<script type="text/javascript">
+
+    $('.savecao').click(function(){
+        $('.savemask').show();
+        setTimeout(function(){
+            $('.savemask').hide()
+        },1000)
+    })
+
+    // 初始化Web Uploader
+    var uploader = WebUploader.create({
+
+        // 选完文件后，是否自动上传。
+        auto: true,
+
+        // swf文件路径
+        swf: '/webuploader/Uploader.swf',
+
+        // 文件接收服务端。
+        server: 'http://webuploader.duapp.com/server/fileupload.php',
+
+        // 选择文件的按钮。可选。
+        // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+        pick: '#filePicker',
+
+        // 只允许选择图片文件。
+        accept: {
+            title: 'Images',
+            extensions: 'gif,jpg,jpeg,bmp,png',
+            mimeTypes: 'image/*'
+        }
+    });
+    // 当有文件添加进来的时候
+    uploader.on( 'fileQueued', function( file ) {
+        // thumbnailWidth x thumbnailHeight 为 100 x 100
+        uploader.makeThumb( file, function( error, src ) {
+            if ( error ) {
+                console.log('不能预览');
+                return;
+            }
+            $('.webuploader-pick').html('<img src="'+src+'" />')
+        }, 900, 500 );
+    });
+
+    // 初始化Web Uploader1
+    var uploader1 = WebUploader.create({
+
+        // 选完文件后，是否自动上传。
+        auto: true,
+
+        // swf文件路径
+        swf: '/webuploader/Uploader.swf',
+
+        // 文件接收服务端。
+        server: 'http://webuploader.duapp.com/server/fileupload.php',
+
+        // 选择文件的按钮。可选。
+        // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+        pick: '.kong_addimg',
+
+        // 只允许选择图片文件。
+        accept: {
+            title: 'Images',
+            extensions: 'gif,jpg,jpeg,bmp,png',
+            mimeTypes: 'image/*'
+        }
+    });
+    var addcon = '';
+    $('.kong_addimg').on('click',function(){
+        addcon = $(this).prev();
+    })
+    // 当有文件添加进来的时候
+    uploader1.on( 'fileQueued', function( file ) {
+        // thumbnailWidth x thumbnailHeight 为 100 x 100
+        uploader.makeThumb( file, function( error, src ) {
+            if ( error ) {
+                console.log('不能预览');
+                return;
+            }
+            addcon.append('<img src="'+src+'" />')
+
+        }, 900, 500 );
+    });
+
+
+
+    $('.delmobile').click(function(){
+        $('.showmob').hide();
+        $('.mobile_content').html('')
+    })
+    $('.liulanmobile').click(function(){
+        $('.showmob').show();
+        $('.mobile_content').append('<h2>'+$(".ex_tit").val()+'</h2>')
+        if($('#sayqian').val()){
+            $('.mobile_content').append('<div class="f_20">说在前面</div>')
+            $('.mobile_content').append('<div>'+$('#sayqian').val()+'</div>')
+        }
+        $('.mobile_content').append(
+            `<div class="ad_con" style="margin-top: 0!important;margin-bottom: 0!important;width: 100%;margin-left: 0;">
+                <section class="ad_text">`+$('#fangtext').html()+`</section>
+            </div>`
+        )
+        $('.addcon').each(function(){
+            if($(this).html()){
+                $('.mobile_content').append(
+                    `<div class="flex_c">`+$(this).prev().html()+`</div>
+                        <div class="addcon">`+$(this).html()+`</div>`
+                )
+            }
+        })
+    })
+
+    $('body').on('keypress','.addinput',function(event){
+        var _this = $(this);
+        var idnum = _this.parent().prev().find('a').attr('href').slice(5);
+        var newidnum = parseInt(idnum)+1;
+        var newid = '#type'+newidnum;
+        if(event.keyCode == 13){
+            $('.hulist').append('<li><a href="'+newid+'"><div>'+_this.val()+'</div></a></li>')
+        }
+        $('.showdiary').append(
+            `<div class="ad_con" id="#type`+newidnum+`">
+                <section class="ad_text">
+                    <div class="flex_c">
+                        <div class="kong_title">
+                            <div class="kong_line"></div>
+                            <div>`+_this.val()+`</div>
+                            <div class="kong_line"></div>
+                        </div>
+                    </div>
+                    <div class="addcon"></div>
+                    <div class="kong_addimg flex_c">
+                        <div class="d_flex_s">
+                            <div class="adimg"><img src="img/addimg.png" alt=""></div>
+                            <div>添加图片</div>
+                        </div>
+                    </div>
+                </section>
+            </div>`
+        )
+        _this.parent().remove();
+    });
+
+    $('.adicon').click(function(){
+        $('.hulist').append('<div><input type="text" class="addinput"></div>')
+    })
+
+</script>
+</html>

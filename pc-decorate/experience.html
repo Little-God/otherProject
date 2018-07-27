@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>装修经验</title>
+    <link rel="stylesheet" href="css/comment.css">
+</head>
+<body>
+<header>
+    <div class="h_75 d_flex color4">
+        <div class="headleft d_flex"><div class="logo_img"><img src="img/logo.png" alt=""></div><div class="logotext">蓉易住</div></div>
+        <div class="bianjititle">装修经验 <span>编辑中</span></div>
+        <div class="liulanmobile"><span class="icon-font">&#xe60f;</span>浏览手机版</div>
+        <div class="d_flex btncao w_230">
+            <div class="savecao">保存草稿</div>
+            <div class="btngroup">发布</div>
+        </div>
+    </div>
+</header>
+<div class="exp_container photo" id="filePicker">
+    <div class="img_icon"><span class="icon-font">&#xe719;</span></div>
+    <div class="f_20">点击添加封面图片</div>
+</div>
+<div class="exp_container exp_title">
+    <input type="text" class="ex_input ex_tit" placeholder="添加标题">
+</div>
+<div id="editor" class="exp_container"></div>
+<div class="showmob">
+    <div class="mobilemask"></div>
+    <div class="mob">
+        <div class="container mobile_con">
+            <div class="delmobile color8"><span class="icon-font">&#xe601;</span></div>
+            <div class="mobileexp">
+                <div class="mobile_content"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="savemask">
+    <div class="save_btn">已保存</div>
+</div>
+
+</body>
+<script src="js/jquery-1.7.2.min.js"></script>
+<!--引入CSS-->
+<link rel="stylesheet" type="text/css" href="webuploader/webuploader.min.js">
+<!--引入JS-->
+<script type="text/javascript" src="webuploader/webuploader.js"></script>
+<script type="text/javascript" src="Wangedite/wangEditor.min.js"></script>
+<script type="text/javascript">
+
+    $('.savecao').click(function(){
+        $('.savemask').show();
+        setTimeout(function(){
+            $('.savemask').hide()
+        },1000)
+    })
+
+    // 初始化Web Uploader
+    var uploader = WebUploader.create({
+
+        // 选完文件后，是否自动上传。
+        auto: true,
+
+        // swf文件路径
+        swf: '/webuploader/Uploader.swf',
+
+        // 文件接收服务端。
+        server: 'http://webuploader.duapp.com/server/fileupload.php',
+
+        // 选择文件的按钮。可选。
+        // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+        pick: '#filePicker',
+
+        // 只允许选择图片文件。
+        accept: {
+            title: 'Images',
+            extensions: 'gif,jpg,jpeg,bmp,png',
+            mimeTypes: 'image/*'
+        }
+    });
+    // 当有文件添加进来的时候
+    uploader.on( 'fileQueued', function( file ) {
+
+        // thumbnailWidth x thumbnailHeight 为 100 x 100
+        uploader.makeThumb( file, function( error, src ) {
+            if ( error ) {
+                console.log('不能预览');
+                return;
+            }
+            $('.webuploader-pick').html('<img src="'+src+'" />')
+
+        }, 700, 350 );
+    });
+
+    var E = window.wangEditor
+    var editor = new E('#editor')
+    // 或者 var editor = new E( document.getElementById('editor') )
+    // 自定义菜单配置
+    editor.customConfig.uploadImgShowBase64 = true
+    editor.customConfig.menus = [
+        'image',  // 插入图片
+        'head',  // 标题
+        'bold',  // 粗体
+    ]
+    editor.create()
+
+    $('.w-e-toolbar').append(
+        `<div class="w-e-menu add-hr" style="z-index:10001;>
+            <i class="icon-font font-blod">&#xe61e;</i>
+        </div>`
+    )
+
+    $('body').on('click','.add-hr',function(){
+        $('.w-e-text').append('<hr><p>&#8203;<br></p>')
+    })
+
+    $('.delmobile').click(function(){
+        $('.showmob').hide();
+        $('.mobile_content').html('')
+    })
+    $('.liulanmobile').click(function(){
+        $('.showmob').show();
+        $('.mobile_content').append('<h2>'+$(".ex_tit").val()+'</h2>')
+        $('.mobile_content').append(editor.txt.html());
+    })
+</script>
+</html>
